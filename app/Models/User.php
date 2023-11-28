@@ -43,7 +43,14 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
     public function habitacion()
-{
+    {
     return $this->belongsTo(Habitacion::class);
-}
+    }
+    public function Fotos(){
+        return $this->hasMany(Foto::class);
+    }
+    public function Comentario(){
+        return $this->hasMany(Comentario::class);
+    }
+
 }
